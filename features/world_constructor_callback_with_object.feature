@@ -3,7 +3,9 @@ Feature: World constructor callback with object
   to use another object than itself as the World instance:
 
     this.World = function WorldConstructor(callback) {
-      var myCustomWorld = { dance: function() { /* ... */ } };
+      var myCustomWorld = {
+        dance: function() { /* ... */ }
+      };
       callback(myCustomWorld); // tell Cucumber to use myCustomWorld
                                // as the world object.
     };
